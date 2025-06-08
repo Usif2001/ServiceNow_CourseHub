@@ -14,17 +14,18 @@ This project demonstrates table design, business logic, and user interface devel
 
 ## 2. Features & Requirement Mapping
 
-| Feature                  | Description                                                                 | Requirement Mapping            |
-|--------------------------|-----------------------------------------------------------------------------|--------------------------------|
-| **Course Listing**       | Custom `course` table shown using a Repeater component in UI Builder.       | Course listing view            |
-| **Course Detail View**   | Default admin view for adding new courses. *(Optional)*                     | Course detail (if required)    |
-| **Course Subscription**  | Subscriptions handled via `subscription` table and toggle button on cards.  | Subscription interaction       |
-| **Duplicate Prevention** | Business Rule prevents same user subscribing multiple times.                | Business rule logic            |
-| **UI Experience**        | Built using “CourseHubExperience” with dynamic data resources.               | UI Builder experience          |
-| **Toggle Logic**         | Script handles creation/deletion of subscriptions.                          | Script logic                   |
-| **Subscribed Courses**   | Filtered view of user's subscribed courses using user reference.            | User-specific view             |
+| Feature                    | Description                                                                                                                                              | Assignment Requirement                 |
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
+| Course Listing             | Implemented using custom table `course`. Displayed using repeater component within UI Builder.<br>(Screenshot: `Ui.png`)                                 | Course listing view (PRD01)            |
+| Course Detail View         | Default view for admin to add course as shown in screenshot.<br>(Screenshot: `course.png`)                                                               | Course detail (PRD01 - if required)    |
+| Course Subscription        | Subscription handled via subscription table. Toggle button on each card performs subscribe/unsubscribe via Data Resource actions.<br>(Screenshot: `builder.png`) | Subscription interaction (PRD02)       |
+| Duplicate Prevention       | A Business Rule (`Prevent Duplicate Subscriptions`) prevents the same user from subscribing to the same course more than once.<br>(Screenshot: `business.png`) | Business rule logic (PRD02)            |
+| UI Experience              | Created through Experience: `CourseHubExperience`, with a main page using repeater and dynamic Data Resource for subscriptions.                         | UI Builder experience                  |
+| Subscribe/Unsubscribe Logic| Created a script for toggle to create and delete subscription from table.<br>(Screenshot: `toggle.png`)                                                  | Script logic (PRD02)                   |
+| Subscribed Courses         | Filtered view of courses user is subscribed to using user reference in subscription table.<br>(Screenshot: `script.png`)                                 | User-specific view (PRD02 - Optional)  |
 
-*Screenshots referenced: `Ui.png`, `course.png`, `builder.png`, `buisness.png`, `toggle.png`, `script.png`.*
+
+
 
 ---
 
