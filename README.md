@@ -70,10 +70,11 @@ This project demonstrates table design, business logic, and user interface devel
 
 ## 6.Screenshots
 The following screenshots demonstrate the implemented features:
-  •Ui.png - Course listing view with repeater component
-  •course.png - Course detail view for admin
-  •builder.png - UI Builder setup showing subscription toggle
-  •business.png - Business rule for duplicate prevention
-  •toggle.png - Toggle script logic implementation
-  •script.png - Subscribed courses filtered view
+
+- **Ui.png** – Course listing view with repeater component  
+- **course.png** – Course detail view for admin  
+- **builder.png** – UI Builder setup showing subscription toggle  
+- **business.png** – Business rule for duplicate prevention  
+- **toggle.png** – Toggle script logic implementation  
+- **script.png** – Subscribed courses filtered view  
 
