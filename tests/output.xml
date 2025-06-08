@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.10.10 on win32)" generated="2025-06-08T17:41:37.519967" rpa="false" schemaversion="5">
+<suite id="s1" name="C7" source="C:\Users\IBM\Desktop\service_now folder\tests\c7.robot">
+<test id="s1-t1" name="Login to ServiceNow and Toggle Course Subscription" line="16">
+<kw name="Open Browser to ServiceNow Login Page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-08T17:41:37.742632" level="INFO">Opening browser 'Chrome' to base url 'https://dev228130.service-now.com/'.</msg>
+<arg>${SERVICE_NOW_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-08T17:41:37.742632" elapsed="8.295986"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-08T17:41:46.038618" elapsed="0.041399"/>
+</kw>
+<doc>Opens browser to ServiceNow login page</doc>
+<status status="PASS" start="2025-06-08T17:41:37.741634" elapsed="8.338383"/>
+</kw>
+<kw name="Login to ServiceNow">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=user_name</arg>
+<arg>timeout=${PAGE_LOAD_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-08T17:41:46.082829" elapsed="0.044967"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-08T17:41:46.127796" level="INFO">Typing text 'admin' into text field 'id=user_name'.</msg>
+<arg>id=user_name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T17:41:46.127796" elapsed="0.217218"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-06-08T17:41:46.347012" level="INFO">Typing password into text field 'id=user_password'.</msg>
+<msg time="2025-06-08T17:41:46.388255" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=user_password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T17:41:46.346021" elapsed="0.094080"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-08T17:41:46.441111" level="INFO">Clicking button 'id=sysverb_login'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T17:41:46.440101" elapsed="21.322680"/>
+</kw>
+<doc>Enters credentials and logs into ServiceNow</doc>
+<status status="PASS" start="2025-06-08T17:41:46.081403" elapsed="21.682547"/>
+</kw>
+<kw name="Navigate to Second URL">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-08T17:42:07.764954" level="INFO">Opening url 'https://dev228130.service-now.com/x/1623260/hub-ui/courses'</msg>
+<arg>${SECOND_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-08T17:42:07.764954" elapsed="0.797976"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css:.hide-live-region</arg>
+<arg>timeout=${PAGE_LOAD_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-08T17:42:08.562930" elapsed="0.071492"/>
+</kw>
+<doc>Navigates to the second URL after successful login</doc>
+<status status="PASS" start="2025-06-08T17:42:07.763950" elapsed="0.871469"/>
+</kw>
+<kw name="Toggle First Course Subscription">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-08T17:42:08.636900" level="INFO">Executing JavaScript:
+function queryShadow(selector, root=document) {const el = root.querySelector(selector);if (el) return el;const shadows = [...root.querySelectorAll('*')].filter(e =&gt; e.shadowRoot);for (const shadow of shadows) {const found = queryShadow(selector, shadow.shadowRoot);if (found) return found;}return null;}window._toggleEl = queryShadow("now-button[id$='1_0_toggle_button']");if (window._toggleEl) window._toggleEl.click();
+Without any arguments.</msg>
+<arg>function queryShadow(selector, root=document) {</arg>
+<arg>const el = root.querySelector(selector);</arg>
+<arg>if (el) return el;</arg>
+<arg>const shadows = [...root.querySelectorAll('*')].filter(e =&gt; e.shadowRoot);</arg>
+<arg>for (const shadow of shadows) {</arg>
+<arg>const found = queryShadow(selector, shadow.shadowRoot);</arg>
+<arg>if (found) return found;</arg>
+<arg>}</arg>
+<arg>return null;</arg>
+<arg>}</arg>
+<arg>window._toggleEl = queryShadow("now-button[id$='1_0_toggle_button']");</arg>
+<arg>if (window._toggleEl) window._toggleEl.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-08T17:42:08.636900" elapsed="0.007873"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-08T17:42:10.655125" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-08T17:42:08.646105" elapsed="2.009020"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-06-08T17:42:10.656465" elapsed="0.414064"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-08T17:42:14.081685" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-08T17:42:11.070529" elapsed="3.011156"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-08T17:42:14.084294" level="INFO">Executing JavaScript:
+function queryShadow(selector, root=document) {const el = root.querySelector(selector);if (el) return el;const shadows = [...root.querySelectorAll('*')].filter(e =&gt; e.shadowRoot);for (const shadow of shadows) {const found = queryShadow(selector, shadow.shadowRoot);if (found) return found;}return null;}const btn = queryShadow("now-button[id$='1_0_toggle_button']");if (!btn) return 'not_found';const nativeBtn = btn.shadowRoot?.querySelector("button");return nativeBtn?.getAttribute("data-ariadescribedby");
+Without any arguments.</msg>
+<msg time="2025-06-08T17:42:14.095248" level="INFO">${state} = Unsubscribe</msg>
+<var>${state}</var>
+<arg>function queryShadow(selector, root=document) {</arg>
+<arg>const el = root.querySelector(selector);</arg>
+<arg>if (el) return el;</arg>
+<arg>const shadows = [...root.querySelectorAll('*')].filter(e =&gt; e.shadowRoot);</arg>
+<arg>for (const shadow of shadows) {</arg>
+<arg>const found = queryShadow(selector, shadow.shadowRoot);</arg>
+<arg>if (found) return found;</arg>
+<arg>}</arg>
+<arg>return null;</arg>
+<arg>}</arg>
+<arg>const btn = queryShadow("now-button[id$='1_0_toggle_button']");</arg>
+<arg>if (!btn) return 'not_found';</arg>
+<arg>const nativeBtn = btn.shadowRoot?.querySelector("button");</arg>
+<arg>return nativeBtn?.getAttribute("data-ariadescribedby");</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-08T17:42:14.083118" elapsed="0.013462"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-08T17:42:14.097831" level="INFO">Current State: Unsubscribe</msg>
+<arg>Current State: ${state}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-08T17:42:14.096580" elapsed="0.001251"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${state}' != 'Unsubscribe' and '${state}' != 'Subscribe'</arg>
+<arg>Fail</arg>
+<arg>Unexpected button state after toggle: ${state}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-08T17:42:14.097831" elapsed="0.001016"/>
+</kw>
+<doc>Toggles the first course subscription button and verifies text change via `data-ariadescribedby`</doc>
+<status status="PASS" start="2025-06-08T17:42:08.635419" elapsed="5.463428"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-08T17:42:14.098847" elapsed="2.767568"/>
+</kw>
+<doc>Test to verify successful login and course subscription toggle functionality</doc>
+<status status="PASS" start="2025-06-08T17:41:37.740989" elapsed="39.125426"/>
+</test>
+<status status="PASS" start="2025-06-08T17:41:37.522549" elapsed="39.346266"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="C7" id="s1" pass="1" fail="0" skip="0">C7</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

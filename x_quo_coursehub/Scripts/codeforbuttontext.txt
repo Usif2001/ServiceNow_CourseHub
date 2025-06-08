@@ -1,0 +1,30 @@
+/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {TransformApiHelpers} params.helpers
+  */
+function evaluateProperty({api, helpers}) {
+	  const courseId = api.item.value.sys_id.value;
+	  const userId = api.context.session.user.sys_id;
+
+	  const subscriptions = api.data.look_up_multiple_records_2.results|| [];
+
+     if (!courseId) {
+    console.warn("Missing inputCourseId in helper inputs.");
+    return 'Subscribe';
+  }
+
+  // console.log(api);
+const isSubscribed = subscriptions.some(sub => {
+  if(sub.course.value === courseId && sub.user.value === userId )
+  {
+    return true;
+
+  }
+  else{
+    return false;
+  }
+  });
+
+ return isSubscribed ? 'Unsubscribe' : 'Subscribe';
+}

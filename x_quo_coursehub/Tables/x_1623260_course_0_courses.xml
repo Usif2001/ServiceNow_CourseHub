@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2025-06-08 20:07:16">
+<x_1623260_course_0_courses action="INSERT_OR_UPDATE">
+<description>Understand data interpretation, visualization, and decision-making with analytics tools.</description>
+<duration>45</duration>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-06-05 18:52:06</sys_created_on>
+<sys_id>040426c48346221061166b70deaad33a</sys_id>
+<sys_mod_count>6</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-06-08 16:57:35</sys_updated_on>
+<title>Data Analytics Essentials</title>
+</x_1623260_course_0_courses>
+<x_1623260_course_0_courses action="INSERT_OR_UPDATE">
+<description>A hands-on introduction to programming using Python and real-world coding exercises.</description>
+<duration>43</duration>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-06-06 20:55:30</sys_created_on>
+<sys_id>29c900a883ce621061166b70deaad3a2</sys_id>
+<sys_mod_count>2</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-06-08 16:57:11</sys_updated_on>
+<title>Python for Beginners</title>
+</x_1623260_course_0_courses>
+<x_1623260_course_0_courses action="INSERT_OR_UPDATE">
+<description>Explore the core building blocks of the web, including HTML, CSS, and JavaScript.</description>
+<duration>30</duration>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-06-08 08:23:00</sys_created_on>
+<sys_id>2cb0f3b483c2261061166b70deaad3a8</sys_id>
+<sys_mod_count>3</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-06-08 16:56:47</sys_updated_on>
+<title>Web Development Basics</title>
+</x_1623260_course_0_courses>
+<x_1623260_course_0_courses action="INSERT_OR_UPDATE">
+<description>Learn the fundamentals of cloud services, deployment models, and leading platforms.</description>
+<duration>20</duration>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-06-08 16:55:55</sys_created_on>
+<sys_id>74a5a5cd83ca261061166b70deaad3e9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-06-08 16:55:55</sys_updated_on>
+<title>Intro to Cloud Computing</title>
+</x_1623260_course_0_courses>
+</unload>

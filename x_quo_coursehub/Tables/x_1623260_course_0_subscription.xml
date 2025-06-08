@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2025-06-08 20:08:19">
+<x_1623260_course_0_subscription action="INSERT_OR_UPDATE">
+<course display_value="29c900a883ce621061166b70deaad3a2">29c900a883ce621061166b70deaad3a2</course>
+<subscription_date>2025-06-08 07:00:00</subscription_date>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-06-08 08:48:15</sys_created_on>
+<sys_id>8896b77883c2261061166b70deaad31c</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-06-08 08:48:15</sys_updated_on>
+<user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</user>
+</x_1623260_course_0_subscription>
+</unload>

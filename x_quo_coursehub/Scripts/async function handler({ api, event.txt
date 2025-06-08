@@ -1,0 +1,45 @@
+async function handler({ api, event, helpers, imports }) {
+  try {
+    const courseId = event.context.item.value.sys_id.value;
+    const userId = api.context.session.user.sys_id;
+    const subscriptions = api.data.look_up_multiple_records_2.results || [];
+
+    const existingSub = subscriptions.find(sub =>
+      sub.course?.value === courseId && sub.user?.value === userId
+    );
+
+    if (existingSub?.sys_id?.value) {
+      // Unsubscribe
+      const deleteResult = await api.data.delete_record_1.execute({
+        table: 'x_1623260_course_0_subscription',
+        recordId: existingSub.sys_id.value,
+      });
+
+      if (deleteResult) {
+        state.isSubscribed = false;
+        return { success: true, message: 'Unsubscribed successfully' };
+      } else {
+        throw new Error('Failed to unsubscribe');
+      }
+    } else {
+      // Subscribe
+      const today = new Date().toISOString();
+
+      const createResult = await api.data.create_record_1.execute({
+        table: 'x_1623260_course_0_subscription',
+        templateFields: `user=${userId}^course=${courseId}^subscription_date=${today}`,
+        useSetDisplayValue: null,
+      });
+
+      if (createResult?.sys_id) {
+        state.isSubscribed = true;
+        return { success: true, message: 'Subscribed successfully' };
+      } else {
+        throw new Error('Failed to subscribe');
+      }
+    }
+  } catch (error) {
+    console.error(error);
+    return { success: false, message: error.message };
+  }
+}
